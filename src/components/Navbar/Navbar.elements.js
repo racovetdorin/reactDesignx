@@ -35,7 +35,7 @@ export const NavIcon = styled(FaMagento)`
 
 `
 export const MobileIcon = styled.div`
-    display:none;
+    display:none;  
 @media screen and (max-width:960px){
     display:block;
     position:absolute;
@@ -43,7 +43,9 @@ export const MobileIcon = styled.div`
     right:0;
     transform:translate(-100%,60%);
     font-size:1.8rem;
-    cursor: pointer;        
+    cursor: pointer;      
+    
+    
 }
 `
 export const NavMenu = styled.ul`
@@ -52,7 +54,8 @@ export const NavMenu = styled.ul`
     list-style:none;
     text-align:center;
     justify-content:space-between;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
     @media screen and (max-width:960px){
     display:flex;
     flex-direction:column;
@@ -66,20 +69,24 @@ export const NavMenu = styled.ul`
     opacity:1;
     transition:all 0.5s ease;
     background:#101522;
+    
+
     }
 `
 export const NavItem = styled.li`
     height:80px;
     border-bottom: 2px solid transparent;
     align-items:center;
+    
+
     &:hover{
-        border-bottom: 3px solid #DDDDDD;
+        border-bottom: 3px solid mediumpurple;
         
     }
 
     @media screen and (max-width:960px){
     width:100%;
-    
+    overflow-y: hidden;
     &:hover{
         border:none;
     }
@@ -99,14 +106,35 @@ export const NavLinks = styled(Link)`
         text-shadow: 0 0 1px #fff;
     }
 
-    @media screen and (max-width:960px){
-        text-align:center;
-        padding:2rem 2rem 2rem 0;
-        width:100%;
-        &:hover{
-            color:#4b59f7;
-            transition:all 0.3s ease;
+@media screen and (max-width:960px){
+    text-align:center;
+    padding:2rem 2rem 2rem 0;
+    width:100%;
+    &:hover{
+        color:#4b59f7;
+        transition:all 0.3s ease;
 
-        }
     }
-`
+}
+`;
+export const NavItemBtn = styled.li`
+@media screen and (max-width:960px){
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:120px;
+    
+}
+`;
+export const NavBtnLink = styled(Link)`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    padding:8px 16px;
+    height:100%;
+    width:100%;
+    border:none;
+    outline:none;
+`;
