@@ -18,7 +18,7 @@ align-items:center;
 text-align:center;
 margin-bottom:24px;
 padding: 24px;
-color:#fff;
+color:#ffffff;
 `;
 
 export const FooterSubHeading = styled.p`
